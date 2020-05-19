@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="737.0" style="-fx-background-color: #ebdbdd;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="borrower.BorrowerController">
+   <top>
+      <TabPane prefHeight="449.0" prefWidth="747.0" style="-fx-background-color: #ebdbdd;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab style="-fx-background-color: #d29da2;" text="ADD BORROWER">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="idborrowertextfirld" layoutX="46.0" layoutY="40.0" prefHeight="27.0" prefWidth="175.0" promptText="BORROWER ID" style="-fx-border-color: #000000; -fx-background-color: transparnt; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextField fx:id="fnameborrowertextfirld" layoutX="46.0" layoutY="80.0" prefHeight="27.0" prefWidth="175.0" promptText="FIRST NAME" style="-fx-border-color: #000000; -fx-background-color: transparnt; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TableView fx:id="tableviwe" layoutX="233.0" layoutY="14.0" prefHeight="376.0" prefWidth="476.0" style="-fx-border-color: #ffffff;">
+                          <columns>
+                            <TableColumn fx:id="idcolumn" prefWidth="36.0" style="-fx-background-color: #ffffff;" text="ID" />
+                            <TableColumn fx:id="fnamecolumn" prefWidth="60.0" style="-fx-background-color: #ffffff;" text="FNAME" />
+                              <TableColumn fx:id="lnamecolumn" prefWidth="57.0" style="-fx-background-color: #ffffff;" text="LNAME" />
+                              <TableColumn fx:id="mobilecolumn" prefWidth="82.0" style="-fx-background-color: #ffffff;" text="MOBILE" />
+                              <TableColumn fx:id="emailcolumn" prefWidth="111.0" style="-fx-background-color: #ffffff;" text="EMAIL" />
+                              <TableColumn fx:id="addresscolumn" minWidth="0.0" prefWidth="73.0" style="-fx-background-color: #ffffff;" text="ADDRESS" />
+                              <TableColumn fx:id="gendercolumn" prefWidth="56.0" style="-fx-background-color: #ffffff;" text="GENDER" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buttonaddborrower" layoutX="14.0" layoutY="332.0" mnemonicParsing="false" onAction="#buttonaddborrowerHandle" prefHeight="28.0" prefWidth="145.0" style="-fx-background-color: #0F0F0F; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="ADD BORROWER" textFill="WHITE" />
+                        <TextField fx:id="lnameborrowertextfirld" layoutX="46.0" layoutY="121.0" prefHeight="27.0" prefWidth="175.0" promptText="LAST NAME" style="-fx-border-color: #000000; -fx-background-color: transparnt; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextField fx:id="mobileborrowertextfirld" layoutX="46.0" layoutY="165.0" prefWidth="175.0" promptText="MOBILE " style="-fx-border-color: #000000; -fx-background-color: transparnt; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextField fx:id="emailborrowertextfirld" layoutX="46.0" layoutY="204.0" prefWidth="175.0" promptText="EMAIL" style="-fx-border-color: #000000; -fx-background-color: transparnt; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextField fx:id="addressborrowertextfirld" layoutX="46.0" layoutY="240.0" prefWidth="175.0" promptText="ADDRESS" style="-fx-border-color: #000000; -fx-background-color: transparnt; -fx-border-width: 0px 0px 2px 0px;" />
+                        <Label layoutX="46.0" layoutY="279.0" text="GENDER :" />
+                        <RadioButton fx:id="maillogin" layoutX="46.0" layoutY="305.0" mnemonicParsing="false" text="MAIL">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="GENDER" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="femaillogin" layoutX="152.0" layoutY="305.0" mnemonicParsing="false" text="FEMAIL" toggleGroup="$GENDER" />
+                        <Button fx:id="buttonshowborrower" layoutX="12.0" layoutY="370.0" mnemonicParsing="false" onAction="#buttonshowborrowerHandle" prefHeight="27.0" prefWidth="148.0" style="-fx-background-color: #0F0F0F; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="SHOW BORROWER" textFill="WHITE" />
+                        <Button fx:id="buttonresetborrower1" layoutX="166.0" layoutY="332.0" mnemonicParsing="false" onAction="#buttonresetborrowerHandle" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #0F0F0F; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="RESET" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-background-color: #d29da2;" text="UPDATE BORROWER">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="buttonupdate" layoutX="243.0" layoutY="343.0" mnemonicParsing="false" onAction="#buttonupdateHandle" prefHeight="25.0" prefWidth="156.0" style="-fx-background-color: #0F0F0F;" text="UPDATE BORROWER" textFill="WHITE" />
+                        <RadioButton fx:id="femailupdate" layoutX="339.0" layoutY="302.0" mnemonicParsing="false" text="FEMAIL" toggleGroup="$GENDER" />
+                        <RadioButton fx:id="mailupdate" layoutX="233.0" layoutY="302.0" mnemonicParsing="false" text="MAIL" toggleGroup="$GENDER" />
+                        <Label layoutX="233.0" layoutY="276.0" text="GENDER :" />
+                        <TextField fx:id="updateaddresstextfield" layoutX="233.0" layoutY="237.0" prefWidth="175.0" promptText="ADDRESS" style="-fx-border-color: #000000; -fx-background-color: transparnt; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextField fx:id="updateemailtextfield" layoutX="233.0" layoutY="201.0" prefWidth="175.0" promptText="EMAIL" style="-fx-border-color: #000000; -fx-background-color: transparnt; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextField fx:id="updatemobiletextfield" layoutX="233.0" layoutY="162.0" prefWidth="175.0" promptText="MOBILE " style="-fx-border-color: #000000; -fx-background-color: transparnt; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextField fx:id="updatelnametextfield" layoutX="233.0" layoutY="118.0" prefWidth="175.0" promptText="LAST NAME" style="-fx-border-color: #000000; -fx-background-color: transparnt; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextField fx:id="updatefnametextfield" layoutX="233.0" layoutY="77.0" prefWidth="175.0" promptText="FIRST NAME" style="-fx-border-color: #000000; -fx-background-color: transparnt; -fx-border-width: 0px 0px 2px 0px;" />
+                        <TextField fx:id="updateidtextfield" layoutX="233.0" layoutY="37.0" prefWidth="175.0" promptText="BORROWER ID" style="-fx-border-color: #000000; -fx-background-color: transparnt; -fx-border-width: 0px 0px 2px 0px;" />
+                        <Button fx:id="buttonreset" layoutX="243.0" layoutY="381.0" mnemonicParsing="false" onAction="#buttonresetHandle" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #0F0F0F;" text="RESET" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab style="-fx-background-color: #d29da2;" text="DELETE BORROWER">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="iddeletetextfield" layoutX="171.0" layoutY="141.0" prefHeight="25.0" prefWidth="302.0" promptText="BORROWER ID" style="-fx-border-color: #000000; -fx-background-color: transparnt; -fx-border-width: 0PX 0PX 2PX 0PX;" />
+                        <Button fx:id="buttondeleteborrower" layoutX="260.0" layoutY="191.0" mnemonicParsing="false" onAction="#buttondeleteborrowerHandle" prefHeight="34.0" prefWidth="143.0" style="-fx-background-color: #0F0F0F;" text="DELETE BORROWER" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #d29da2;" text="SEARCH BORROWER">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="buttonsearch" layoutX="51.0" layoutY="197.0" mnemonicParsing="false" onAction="#buttonsearchborrowerHandle" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #0F0F0F; -fx-border-radius: 10px;" text="SEARCH" textFill="WHITE" />
+                        <TextField fx:id="idsearchborrower" layoutX="14.0" layoutY="142.0" prefHeight="25.0" prefWidth="243.0" promptText="BORROWER ID " style="-fx-border-width: 0PX 0PX 2PX 0PX; -fx-background-color: transparnt; -fx-border-color: #000000;" />
+                        <TextArea fx:id="outputsearchtextarea" layoutX="304.0" layoutY="75.0" prefHeight="251.0" prefWidth="325.0" style="-fx-background-color: transparnt; -fx-border-color: #0f0f0f; -fx-border-width: 1px 1px 2px 1px; -fx-border-radius: 5px;" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </top>
+   <bottom>
+      <Button fx:id="buttonback" mnemonicParsing="false" onAction="#buttonbackHandle" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #0F0F0F; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="BACK" textFill="WHITE" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

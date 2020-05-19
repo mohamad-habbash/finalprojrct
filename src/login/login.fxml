@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+   <left>
+      <AnchorPane prefHeight="426.0" prefWidth="316.0" style="-fx-background-color: #0f0f0f;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="13.0" layoutY="200.0" text="liabrary mangement system " textFill="WHITE">
+               <font>
+                  <Font name="Eras Demi ITC" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="119.0" fitWidth="101.0" layoutX="97.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Documents/NetBeansProjects/finalproject/src/image/images.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="426.0" prefWidth="556.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="Textfieldusername" layoutX="88.0" layoutY="177.0" prefHeight="27.0" prefWidth="162.0" promptText="User name" style="-fx-background-color: transparnt; -fx-border-color: #0f0f0f; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="Textfieldpassword" layoutX="88.0" layoutY="224.0" prefHeight="27.0" prefWidth="162.0" promptText="Password" style="-fx-background-color: transparnt; -fx-border-color: #0f0f0f; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="loginbutton" layoutX="126.0" layoutY="283.0" mnemonicParsing="false" onAction="#loginbuttonHandle" prefHeight="33.0" prefWidth="73.0" style="-fx-background-color: #0f0f0f;" text="Login" textFill="WHITE" />
+            <Label layoutX="116.0" layoutY="119.0" prefHeight="35.0" prefWidth="127.0" text="User Login" textFill="#0f0f0f">
+               <font>
+                  <Font name="Sitka Small" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="laabelerror" layoutX="97.0" layoutY="258.0" prefHeight="17.0" prefWidth="211.0" />
+            <ImageView fitHeight="31.0" fitWidth="27.0" layoutX="58.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Documents/NetBeansProjects/finalproject/src/image/user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="26.0" layoutX="59.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Documents/NetBeansProjects/finalproject/src/image/password1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
